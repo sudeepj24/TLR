@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Services - The Lotus Roots</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+                .navbar {
+            background-color: #343a40;
+            /* Dark grey */
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .navbar-brand:hover,
+        .nav-link:hover {
+            color: #20c997 !important;
+            /* Teal */
+        }
+
+        .footer {
+            background-color: #343a40;
+            /* Dark grey */
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer a {
+            color: #20c997;
+            /* Teal */
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+            color: white;
+        }
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header-section {
+            background-image: url('./img/service/mission-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .header-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .header-section p {
+            font-size: 1.2rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #007bff;
+        }
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .services .card {
+            margin-bottom: 30px;
+        }
+        .services .card-icon img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: 150px;
+        }
+        .industries img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .industries .card-body {
+            text-align: center;
+        }
+        .why-choose-us {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .why-choose-us h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .why-choose-us p {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./LogoTLR.jpg" alt="The Lotus Roots" width="30" height="30" class="d-inline-block align-top">
+                The Lotus Roots</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <!-- Training Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Training
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="trainingDropdown">
+                            <a class="dropdown-item" href="#">Professional Training</a>
+                            <a class="dropdown-item" href="#">Academic Courses</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
+                    <li class="nav-item"><a href="#contact-us" class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="container">
+            <h1>CAD (Computer-Aided Design) Services</h1>
+            <p>Specializing in Autodesk Products</p>
+        </div>
+    </div>
+
+    <!-- Mission Statement -->
+    <div class="container my-5">
+        <div class="text-center">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-subtitle">To empower businesses with cutting-edge CAD solutions and expertise in Autodesk software, ensuring precision, efficiency, and innovation in every project.</p>
+        </div>
+    </div>
+
+<!-- Services Offered -->
+<div class="container my-5">
+    <h2 class="section-title">Services Offered</h2>
+    <div class="row services">
+        <!-- Existing Services -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/autocad-icon.jpeg" alt="AutoCAD Icon">
+                    </div>
+                    <h5 class="card-title">AutoCAD Design and Drafting</h5>
+                    <p class="card-text">Creation of detailed 2D and 3D drawings, layouts, and schematics.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/revit-icon.jpeg" alt="Revit Icon">
+                    </div>
+                    <h5 class="card-title">Revit BIM Services</h5>
+                    <p class="card-text">Building Information Modeling (BIM) for architecture, structural engineering, and MEP.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/inventor-icon.jpeg" alt="Inventor Icon">
+                    </div>
+                    <h5 class="card-title">Inventor 3D Modeling</h5>
+                    <p class="card-text">Advanced 3D mechanical design and simulation, featuring parametric and freeform modeling.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/civil3d-icon.jpeg" alt="Civil 3D Icon">
+                    </div>
+                    <h5 class="card-title">Civil 3D Solutions</h5>
+                    <p class="card-text">Civil engineering design and documentation for infrastructure projects.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/3dsmax-icon.jpeg" alt="3ds Max Icon">
+                    </div>
+                    <h5 class="card-title">3ds Max Visualization</h5>
+                    <p class="card-text">High-quality 3D rendering and visualization for architectural and product design.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/custom-training-icon.jpeg" alt="Custom Training Icon">
+                    </div>
+                    <h5 class="card-title">Custom Training and Support</h5>
+                    <p class="card-text">Tailored training programs and ongoing support for Autodesk software.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 offset-md-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/pdm-plm-icon.jpeg" alt="PDM PLM Icon">
+                    </div>
+                    <h5 class="card-title">PDM PLM Services</h5>
+                    <p class="card-text">Data Migration, CAD Integration, Data Analytics for product lifecycle management.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="card-icon mb-3">
+                        <img src="./img/service/cad-dev-icon.jpeg" alt="CAD Development Icon">
+                    </div>
+                    <h5 class="card-title">CAD Development</h5>
+                    <p class="card-text">AutoCAD API, Revit API, Vault API, Autodesk Vault, Autodesk Fusion 360 Manage.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Industries Served -->
+    <div class="container my-5">
+        <h2 class="section-title">Industries Served</h2>
+        <div class="row industries">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/service/architecture.jpeg" class="card-img-top" alt="Architecture">
+                    <div class="card-body">
+                        <h5 class="card-title">Architecture</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/service/engineering.jpeg" class="card-img-top" alt="Engineering">
+                    <div class="card-body">
+                        <h5 class="card-title">Engineering</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/service/construction.jpeg" class="card-img-top" alt="Construction">
+                    <div class="card-body">
+                        <h5 class="card-title">Construction</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/service/manufacturing.jpeg" class="card-img-top" alt="Manufacturing">
+                    <div class="card-body">
+                        <h5 class="card-title">Manufacturing</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/service/urban-planning.jpeg" class="card-img-top" alt="Urban Planning">
+                    <div class="card-body">
+                        <h5 class="card-title">Urban Planning</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/service/product-design.jpeg" class="card-img-top" alt="Product Design">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Design</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Why Choose Us -->
+<div class="container my-5">
+    <h2 class="section-title text-center mb-4">Why Choose Us</h2>
+    <div class="row gy-4 justify-content-center">
+        <!-- Expertise -->
+        <div class="col-md-5">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Expertise</h3>
+                    <p class="card-text">Our team consists of certified Autodesk professionals with extensive industry experience. We stay up-to-date with the latest technologies to provide the best possible CAD solutions.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Innovation -->
+        <div class="col-md-5">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Innovation</h3>
+                    <p class="card-text">We leverage advanced tools and techniques to deliver innovative designs that push the boundaries of what's possible in CAD. Our focus is on creating solutions that are not only functional but also forward-thinking.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Quality -->
+        <div class="col-md-5">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Quality</h3>
+                    <p class="card-text">We prioritize quality in every project, ensuring that our CAD deliverables meet the highest standards. Our attention to detail and commitment to excellence make us a trusted partner for businesses of all sizes.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Customer-Centric -->
+        <div class="col-md-5">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Customer-Centric</h3>
+                    <p class="card-text">Our services are tailored to meet the unique needs of our clients. We work closely with you to understand your goals and deliver solutions that align with your vision. Your success is our priority.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-4">
+                <h5>Contact Information</h5>
+                <!-- <p>Address: 123 Lotus Street, Tech City, TC 12345</p> -->
+                <p>Phone: +447833818001</p>
+                <p>Email: <a href="mailto:info.thelotusroots@gmail.com">info.thelotusroots@gmail.com</a></p>
+            </div>
+            <!-- Quick Links -->
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <!-- <li><a href="#">Blog</a></li> -->
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Social Media Links -->
+            <div class="col-md-4">
+                <h5>Social Media Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+                    </li>
+                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                    </li>
+                    <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                    </li>
+                    <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
