@@ -92,8 +92,39 @@
 
 <body>
 
-    <!-- Placeholder for the Header -->
-    <div id="header-placeholder"></div>
+
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./LogoTLR.jpg" alt="The Lotus Roots" width="30" height="30" class="d-inline-block align-top">
+                The Lotus Roots</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <!-- Training Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Training
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="trainingDropdown">
+                            <a class="dropdown-item" href="#">Professional Training</a>
+                            <a class="dropdown-item" href="#">Academic Courses</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">CAD Services</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
+                    <li class="nav-item"><a href="#contact-us" class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1554232456-8727aae0cfa4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNvZnR3YXJlJTIwY29tcGFueXxlbnwwfHwwfHx8MA%3D%3D');">
