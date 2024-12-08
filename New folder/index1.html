@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lotus Roots - Professional Training & Technology Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4FD1C5; /* Cyan */
+            --secondary-color: #2C5282; /* Dark Blue */
+            --accent-color: #38B2AC; /* Teal */
+            --background-color: #F5F9FA; /* Light Gray */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .service-card:hover, .product-card:hover, .training-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* Custom Scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4FD1C5;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38B2AC;
+        }
+    </style>
+</head>
+<body class="bg-background-color">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <!-- Replace the src with your actual logo image -->
+                <img src="path-to-your-logo.png" alt="The Lotus Roots Logo" class="h-10 w-10 mr-3">
+                <span class="text-xl font-bold text-primary-color">The Lotus Roots</span>
+            </div>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-primary-color transition">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-primary-color transition">About</a>
+                <a href="#services" class="text-gray-700 hover:text-primary-color transition">Services</a>
+                <a href="#product" class="text-gray-700 hover:text-primary-color transition">ManageOne</a>
+                <a href="#training" class="text-gray-700 hover:text-primary-color transition">Training</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary-color transition">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <ul class="flex flex-col p-4 space-y-4">
+                <li><a href="#home" class="text-gray-700 hover:text-primary-color transition">Home</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-primary-color transition">About</a></li>
+                <li><a href="#services" class="text-gray-700 hover:text-primary-color transition">Services</a></li>
+                <li><a href="#product" class="text-gray-700 hover:text-primary-color transition">ManageOne</a></li>
+                <li><a href="#training" class="text-gray-700 hover:text-primary-color transition">Training</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-primary-color transition">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen gradient-bg flex items-center justify-center" data-aos="fade-in">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-pulse">Empowering Growth Through Technology</h1>
+            <p class="text-xl md:text-2xl text-white mb-8">Professional Training, Academic Excellence, and Innovative Solutions</p>
+            <a href="#contact" class="bg-white text-primary-color px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-background-color" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- About Image (Optional) -->
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <img src="https://via.placeholder.com/600x400" alt="About The Lotus Roots" class="rounded-lg shadow-lg">
+                </div>
+                <!-- About Text -->
+                <div class="lg:w-1/2 lg:pl-12">
+                    <h2 class="text-3xl font-bold text-secondary-color mb-4">About The Lotus Roots</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        The Lotus Roots is a premier provider of Professional Training, Academic Courses for GCSE and 11+ exams, and Technology Services. Our mission is to deliver high-quality, customized training and support services, fostering innovation and efficiency in workflows while ensuring long-term success for our clients.
+                    </p>
+                    <!-- Mission Highlight -->
+                    <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-black mb-2">Our Mission</h3>
+                        <p class="text-gray-700">
+                            To deliver high-quality, customized training and support services, fostering innovation and efficiency in workflows while ensuring long-term success for our clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-background-color" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-secondary-color mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Professional Training -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-2xl transition">
+                    <i class="bi bi-mortarboard-fill text-5xl text-primary-color mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Professional Training</h3>
+                    <p class="text-gray-600">Enhance your skills with our expert-led training programs in various professional domains.</p>
+                </div>
+                <!-- Academic Courses -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-2xl transition">
+                    <i class="bi bi-book-half text-5xl text-primary-color mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Academic Courses</h3>
+                    <p class="text-gray-600">Prepare for GCSE and 11+ exams with our comprehensive and tailored academic courses.</p>
+                </div>
+                <!-- Technology Services -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-2xl transition">
+                    <i class="bi bi-tools text-5xl text-primary-color mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Technology Services</h3>
+                    <p class="text-gray-600">Leverage our technology solutions to streamline your operations and enhance productivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="py-20 px-4 bg-background-color" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-secondary-color mb-12">Our Product: ManageOne</h2>
+            <div class="bg-white rounded-lg shadow-lg p-12 flex flex-col lg:flex-row items-center">
+                <!-- Product Image -->
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <img src="https://via.placeholder.com/500x400" alt="ManageOne" class="rounded-lg shadow-lg">
+                </div>
+                <!-- Product Description -->
+                <div class="lg:w-1/2 lg:pl-12">
+                    <h3 class="text-2xl font-semibold text-secondary-color mb-4">ManageOne</h3>
+                    <p class="text-gray-700 text-lg mb-6">
+                        ManageOne provides a comprehensive, easy-to-use solution designed to help coaching institutes, sports clubs, and similar organizations manage their students and administrative tasks efficiently. It offers an all-in-one system that allows each institute or club to customize and control their operations independently, all while ensuring scalability and flexibility.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Easy-to-use interface</li>
+                        <li>Customizable features</li>
+                        <li>Scalable solution</li>
+                    </ul>
+                    <a href="#contact" class="bg-primary-color text-white px-6 py-3 rounded-full font-semibold hover:bg-accent-color transition">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Courses Section -->
+    <section id="training" class="py-20 px-4 bg-background-color" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-secondary-color mb-12">Current Training Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Python Programming & AI Fundamentals -->
+                <div class="training-card bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition">
+                    <i class="bi bi-code-slash text-5xl text-primary-color mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Python Programming & AI Fundamentals</h3>
+                    <p class="text-gray-600">Master Python programming and gain foundational knowledge in Artificial Intelligence to advance your career.</p>
+                    <a href="#contact" class="inline-block mt-4 text-primary-color hover:underline">Learn More →</a>
+                </div>
+                <!-- Fundamentals of Computer Science -->
+                <div class="training-card bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition">
+                    <i class="bi bi-laptop text-5xl text-primary-color mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Fundamentals of Computer Science</h3>
+                    <p class="text-gray-600">Build a strong understanding of computer science principles and concepts essential for various technological fields.</p>
+                    <a href="#contact" class="inline-block mt-4 text-primary-color hover:underline">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-50" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-secondary-color mb-12">Get in Touch</h2>
+            <div class="flex flex-col lg:flex-row lg:space-x-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <form action="#" method="POST" class="bg-white p-12 rounded-lg shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-color text-white px-4 py-3 rounded-full font-semibold hover:bg-accent-color transition">Send Message</button>
+                    </form>
+                </div>
+                <!-- Contact Information -->
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-12 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-semibold text-center text-secondary-color mb-6">We'd Love to Hear from You!</h3>
+                        <p class="text-gray-700 text-lg mb-6 text-center">Reach out to us with any questions or inquiries.</p>
+                        <div class="flex items-center mb-4">
+                            <i class="bi bi-telephone-fill text-primary-color text-2xl mr-4"></i>
+                            <span class="text-gray-700 text-lg">+447833818001</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="bi bi-envelope-fill text-primary-color text-2xl mr-4"></i>
+                            <span class="text-gray-700 text-lg">info.thelotusroots@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Logo and Description -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <!-- Replace the src with your actual logo image -->
+                        <img src="path-to-your-logo.png" alt="The Lotus Roots Logo" class="h-8 w-8 mr-3">
+                        <h3 class="text-xl font-semibold">The Lotus Roots</h3>
+                    </div>
+                    <p class="text-gray-300">Providing Professional Training, Academic Courses, and Technology Services.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-primary-color transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-primary-color transition">About</a></li>
+                        <li><a href="#services" class="hover:text-primary-color transition">Services</a></li>
+                        <li><a href="#product" class="hover:text-primary-color transition">ManageOne</a></li>
+                        <li><a href="#training" class="hover:text-primary-color transition">Training</a></li>
+                        <li><a href="#contact" class="hover:text-primary-color transition">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <div class="flex items-center mb-4">
+                        <i class="bi bi-telephone-fill text-primary-color text-2xl mr-4"></i>
+                        <span class="text-gray-300">+447833818001</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="bi bi-envelope-fill text-primary-color text-2xl mr-4"></i>
+                        <span class="text-gray-300">info.thelotusroots@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media Links -->
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="#" class="hover:text-primary-color transition"><i class="bi bi-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-primary-color transition"><i class="bi bi-twitter text-2xl"></i></a>
+                <a href="#" class="hover:text-primary-color transition"><i class="bi bi-linkedin text-2xl"></i></a>
+                <a href="#" class="hover:text-primary-color transition"><i class="bi bi-instagram text-2xl"></i></a>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="mt-8 border-t border-white/20 pt-4 text-center text-gray-300">
+                &copy; 2024 The Lotus Roots. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS for Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission Handling
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Implement your form submission logic here
+            alert('Thank you for your message! We will get back to you soon.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>

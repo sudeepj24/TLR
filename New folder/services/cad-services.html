@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Services - Lotos Root</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div id="header-placeholder"></div>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Comprehensive CAD Services</h1>
+                <p class="text-xl mb-8">Precision design, drafting, and modeling solutions tailored to your industry's needs</p>
+                <button class="bg-white text-cyan-600 px-8 py-3 rounded-full font-semibold hover:bg-cyan-50 transition">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-lg mb-8">
+                <h2 class="text-3xl font-bold text-center mb-6">About Our CAD Services</h2>
+                <p class="text-gray-700 text-lg mb-4">
+                    Lotos Root is a leading provider of comprehensive CAD services, specializing in delivering high-quality design, drafting, and modeling solutions to clients across diverse industries. Our team of skilled professionals leverages cutting-edge CAD technologies and industry best practices to meet the evolving needs of our clients. We are committed to precision, innovation, and customer satisfaction.
+                </p>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold text-center text-black mb-4">Our Mission</h3>
+                <p class="text-gray-700 text-lg text-center">
+                    Our mission is to provide exceptional CAD services that empower our clients to innovate, design, and manufacture with accuracy and efficiency. Our goal is to enhance the product development lifecycle through state-of-the-art design tools and methodologies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Core Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-3d text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">3D CAD Modeling</h3>
+                    <p class="text-gray-600">We offer detailed 3D CAD modeling services using platforms like AutoCAD, SolidWorks, Creo, and Autodesk Inventor. Our models are designed for manufacturability, ensuring every aspect is production-ready.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-pencil-square text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">2D Drafting and Detailing</h3>
+                    <p class="text-gray-600">Our precise 2D drafting services deliver detailed engineering drawings, including layouts, schematics, and assembly instructions, to meet stringent industry standards.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-lightbulb text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Product Design and Development</h3>
+                    <p class="text-gray-600">From concept to final product, we assist clients in the complete product design cycle, offering expertise in parametric design, surfacing, sheet metal, and plastics engineering.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-arrow-counterclockwise text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Reverse Engineering</h3>
+                    <p class="text-gray-600">We specialize in reverse engineering services, helping clients re-create detailed 3D models from physical parts using advanced scanning and modeling tools.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-bar-chart-line text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Finite Element Analysis (FEA) & Simulation</h3>
+                    <p class="text-gray-600">Our team conducts FEA and simulation services to analyze structural integrity, thermal performance, and optimize design functionality for safety and efficiency.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-box-arrow-down text-4xl text-cyan-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">CAD Conversion and Migration</h3>
+                    <p class="text-gray-600">We assist companies in converting legacy CAD data into modern formats, ensuring a smooth transition during upgrades or software migrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Compliance -->
+    <section class="bg-gray-50 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Certifications & Compliance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-semibold mb-4">Certified CAD Professionals</h3>
+                    <p class="text-gray-600">Our team consists of certified experts in various CAD platforms, ensuring the highest level of design and support.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-xl font-semibold mb-4">Industry Compliance</h3>
+                    <p class="text-gray-600">We adhere to industry-specific regulations and standards, ensuring our solutions are always up to date with the latest compliance requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="bg-gray-50 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Industries We Serve</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="text-center p-4">
+                    <i class="bi bi-building text-4xl text-cyan-600 mb-2"></i>
+                    <p class="font-medium">Manufacturing</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="bi bi-car-front text-4xl text-cyan-600 mb-2"></i>
+                    <p class="font-medium">Automotive</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="bi bi-cpu text-4xl text-cyan-600 mb-2"></i>
+                    <p class="font-medium">Consumer Electronics</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="bi bi-gear-wide-connected text-4xl text-cyan-600 mb-2"></i>
+                    <p class="font-medium">Industrial Machinery</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="bi bi-fuel-pump text-4xl text-cyan-600 mb-2"></i>
+                    <p class="font-medium">Oil & Gas</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="bi bi-droplet text-4xl text-cyan-600 mb-2"></i>
+                    <p class="font-medium">Pharmaceutical & Chemical</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-cyan-600 text-white py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Elevate Your Design Capabilities?</h2>
+            <p class="text-xl mb-8">Contact us today to discuss your CAD needs</p>
+            <button class="bg-white text-cyan-600 px-8 py-3 rounded-full font-semibold hover:bg-cyan-50 transition">Contact Us</button>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div> <!-- Placeholder for the footer -->
+
+    <script>
+        $(document).ready(function() {
+            $("#header-placeholder").load("/components/header.html");  // Load the header
+            $("#footer-placeholder").load("/components/footer.html");  // Load the footer
+        });
+    </script>
+
+</body>
+</html>
