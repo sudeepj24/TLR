@@ -1,0 +1,87 @@
+<!-- header.html -->
+
+<style>
+    :root {
+        --primary-color: #4A90A0;
+        --secondary-color: #2C5D69;
+        --accent-color: #6BB5C7;
+        --background-color: #F5F9FA;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .gradient-bg {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .service-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        /* Makes it clear that the card is clickable */
+    }
+
+    .service-card:hover {
+        transform: scale(1.05);
+        /* Enlarges the card slightly */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        /* Optionally enhances the shadow for better emphasis */
+    }
+
+
+
+
+    .navbar-fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+        transition: all 0.3s ease;
+    }
+
+    .service-card i {
+        margin-right: 8px;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        float: right;
+    }
+
+
+    @media (min-width: 768px) {
+        #mobile-menu-button {
+            display: none;
+        }
+    }
+</style>
+
+<nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <div class="w-12 h-12 mr-2">
+                    <div class="w-full h-full bg-gray-200 rounded-full"></div>
+                </div>
+                <span class="text-xl font-bold text-[var(--primary-color)]">The Lotus Roots</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-[var(--primary-color)]">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-[var(--primary-color)]">About</a>
+                <a href="#services" class="text-gray-600 hover:text-[var(--primary-color)]">Services</a>
+                <a href="#courses" class="text-gray-600 hover:text-[var(--primary-color)]">Courses</a>
+                <a href="#products" class="text-gray-600 hover:text-[var(--primary-color)]">Products</a>
+                <a href="#contact" class="text-gray-600 hover:text-[var(--primary-color)]">Contact</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-600">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

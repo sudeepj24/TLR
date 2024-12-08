@@ -4,401 +4,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Lotus Roots</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./favicon.png">
+    <title>The Lotus Roots - Professional Training & Technology Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .navbar {
-            background-color: #343a40;
-            /* Dark grey */
+        :root {
+            --primary-color: #4A90A0;
+            --secondary-color: #2C5D69;
+            --accent-color: #6BB5C7;
+            --background-color: #F5F9FA;
         }
 
-        .navbar-brand,
-        .nav-link {
-            color: white !important;
+        body {
+            font-family: 'Poppins', sans-serif;
         }
 
-        .navbar-brand:hover,
-        .nav-link:hover {
-            color: #20c997 !important;
-            /* Teal */
-        }
-
-        .footer {
-            background-color: #343a40;
-            /* Dark grey */
-            color: white;
-            padding: 40px 0;
-        }
-
-        .footer a {
-            color: #20c997;
-            /* Teal */
-        }
-
-        .footer a:hover {
-            text-decoration: none;
-            color: white;
-        }
-
-        .hero {
-            padding: 100px 0;
-            color: white;
-            text-align: center;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .cta {
-            padding: 50px 0;
-            color: white;
-            text-align: center;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .section-title {
-            margin-bottom: 30px;
-            font-size: 2rem;
-            font-weight: bold;
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         }
 
         .service-card {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            /* Makes it clear that the card is clickable */
         }
 
-        .service-card img {
-            max-width: 100%;
-            border-radius: 8px;
+        .service-card:hover {
+            transform: scale(1.05);
+            /* Enlarges the card slightly */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            /* Optionally enhances the shadow for better emphasis */
         }
 
-        .notification {
-            display: none;
+
+        /* .service-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        } */
+
+        .navbar-fixed {
             position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            top: 0;
+            width: 100%;
             z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .service-card i {
+            margin-right: 8px;
+        }
+
+        .arrow {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            float: right;
+        }
+
+        .product-image-container {
+            width: 100%;
+            /* Full width of its parent to a max of 500px */
+            max-width: 500px;
+            /* Max width to control sizing on larger screens */
+            height: 500px;
+            /* Fixed height equal to max-width for a 1:1 aspect ratio */
+            margin: auto;
+            /* Centering if needed */
+        }
+
+        .product-image {
+            width: 100%;
+            /* Ensures the image takes full width of its container */
+            height: 100%;
+            /* Ensures the image takes full height of its container */
+            object-fit: cover;
+            /* Ensures the image covers the area without distorting ratio */
+            border-radius: 8px;
+            /* Optional: matches other design elements */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Optional: adds shadow for depth */
+        }
+
+        @media (min-width: 768px) {
+            #mobile-menu-button {
+                display: none;
+            }
         }
     </style>
 </head>
 
-<body>
-
-
-    <!-- Header Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./LogoTLR.jpg" alt="The Lotus Roots" width="30" height="30" class="d-inline-block align-top">
-                The Lotus Roots sample</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <!-- Training Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Training
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="trainingDropdown">
-                            <a class="dropdown-item" href="#">Professional Training</a>
-                            <a class="dropdown-item" href="#">Academic Courses</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="./services.html">CAD Services</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
-                    <li class="nav-item"><a href="#contact-us" class="nav-link" href="#">Contact Us</a></li>
-                </ul>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 mr-2">
+                        
+                        <div class="w-full h-full bg-gray-200 rounded-full" ></div>
+                    </div>
+                    <span class="text-xl font-bold text-[var(--primary-color)]">The Lotus Roots</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-[var(--primary-color)]">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-[var(--primary-color)]">About</a>
+                    <a href="#services" class="text-gray-600 hover:text-[var(--primary-color)]">Services</a>
+                    <a href="#courses" class="text-gray-600 hover:text-[var(--primary-color)]">Courses</a>
+                    <a href="#products" class="text-gray-600 hover:text-[var(--primary-color)]">Products</a>
+                    <a href="#contact" class="text-gray-600 hover:text-[var(--primary-color)]">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1554232456-8727aae0cfa4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNvZnR3YXJlJTIwY29tcGFueXxlbnwwfHwwfHx8MA%3D%3D');">
-        <div class="container">
-            <h1>Welcome to The Lotus Roots</h1>
-            <p>Empowering your future with cutting-edge education and technology solutions</p>
-            <a href="#" class="btn btn-light">Get Started</a>
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to The Lotus Roots</h1>
+            <p class="text-xl mb-8">Empowering your future with cutting-edge education and technology solutions</p>
+            <a href="#contact"
+                class="bg-white text-[var(--primary-color)] px-8 py-3 rounded-full font-semibold hover:bg-opacity-90">Get
+                Started</a>
         </div>
     </section>
 
-    <!-- Other content goes here -->
-         <!-- Courses Section -->
-    <section class="container my-5">
-        <h2 class="section-title text-center">Our Courses</h2>
-        <div class="row">
-            <!-- Course 1 -->
-            <div class="col-md-6 mb-4">
-                <div class="course-card"
-                    style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; text-align: center; display: flex; flex-direction: column; height: 100%;">
-                    <img src="./python.jpeg" class="img-fluid mb-3" alt="Problem Solving using Python"
-                        style="border-radius: 8px; max-height: 200px; object-fit: cover;">
-                    <h3>Problem Solving using Python</h3>
-                    <p style="flex-grow: 1;">This course focuses on building logical thinking and understanding basic
-                        programming concepts such as conditional statements, loops, and functions. Students will engage
-                        in extensive problem-solving using various programming methodologies, explore object-oriented
-                        programming paradigms, and learn about common algorithms.</p>
-                    <a href="#contact-us" class="btn btn-primary">Contct us to Enroll Now</a>
-                </div>
-            </div>
-            <!-- Course 2 -->
-            <div class="col-md-6 mb-4">
-                <div class="course-card"
-                    style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; text-align: center; display: flex; flex-direction: column; height: 100%;">
-                    <img src="./cs.jpeg" class="img-fluid mb-3" alt="Fundamentals of Computer Science"
-                        style="border-radius: 8px; max-height: 200px; object-fit: cover;">
-                    <h3>Fundamentals of Computer Science</h3>
-                    <p style="flex-grow: 1;">This course covers essential topics such as computer organization, computer
-                        networks, and the functioning of web applications. Students will gain a solid foundation in
-                        programming fundamentals and an introduction to cybersecurity basics, preparing them for
-                        advanced studies in computer science.</p>
-                    <a href="#contact-us" class="btn btn-primary">Contct us to Enroll Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Introduction Section -->
-    <section class="container my-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h2 class="section-title">About Us</h2>
-                <p>At The Lotus Roots, we are dedicated to providing top-notch education and technology services. Our
-                    mission is to bridge the gap between knowledge and real-world application through professional
-                    training and advanced technological solutions. Explore our services and see how we can help you
-                    achieve your goals.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
-                    class="img-fluid" alt="About Us Image">
-            </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[var(--secondary-color)]" data-aos="fade-up">About Us
+            </h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto" data-aos="fade-up">
+                At The Lotus Roots, we specialize in providing professional training and technology services to empower
+                individuals and businesses. Our mission is to drive growth and innovation through cutting-edge education
+                and solutions.
+            </p>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="container my-5">
-        <h2 class="section-title text-center">Our Services</h2>
-        <div class="row">
-            <!-- Service 1 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWNhZGVtaWMlMjBjb3Vyc2VzfGVufDB8fDB8fHww"
-                        class="img-fluid mb-3" alt="Professional Training">
-                    <h3>Professional Training</h3>
-                    <p>Enhance your skills with our specialized professional training programs, including Python
-                        Programming, Computer Science Fundamentals, and Computer Networking.</p>
+<!-- Services Section -->
+<section id="services" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-[var(--secondary-color)]" data-aos="fade-up">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Professional Training Card -->
+            <a href="/professional-training" class="service-card bg-white rounded-lg p-6 shadow-md block" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-gear-fill text-4xl text-[var(--primary-color)]"></i>
+                <h3 class="text-xl font-semibold mt-4 mb-2">Professional Training</h3>
+                <p class="text-gray-600">Enhance your skills with our specialized professional training programs, including Python Programming, Computer Science Fundamentals, and Computer Networking.</p>
+                <i class="bi bi-arrow-right arrow" style="color: var(--primary-color);"></i>
+            </a>
+            <!-- Academic Courses Card -->
+            <a href="/academic-courses" class="service-card bg-white rounded-lg p-6 shadow-md block" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-pc-display text-4xl text-[var(--primary-color)]"></i>
+                <h3 class="text-xl font-semibold mt-4 mb-2">Academic Courses</h3>
+                <p class="text-gray-600">Prepare for academic excellence with our tailored courses for GCSE and 11+ exams. We provide comprehensive support to help you succeed.</p>
+                <i class="bi bi-arrow-right arrow" style="color: var(--primary-color);"></i>
+            </a>
+            <!-- Technology Services Card -->
+            <a href="/services.html" class="service-card bg-white rounded-lg p-6 shadow-md block" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-book text-4xl text-[var(--primary-color)]"></i>
+                <h3 class="text-xl font-semibold mt-4 mb-2">Technology Services</h3>
+                <p class="text-gray-600">Leverage our expertise in Website and Application Development, Mechanical and Civil Engineering, and Cybersecurity to drive your business forward.</p>
+                <i class="bi bi-arrow-right arrow" style="color: var(--primary-color);"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[var(--secondary-color)]" data-aos="fade-up">Current
+                Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-right">
+                    <img src="./python.jpeg" alt="Python Course" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-4">Python Programming & AI Fundamentals</h3>
+                    <p class="text-gray-600">Learn the basics of Python programming and artificial intelligence
+                        concepts.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-left">
+                    <img src="./cs.jpeg" alt="Computer Science Course"
+                        class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-4">Fundamentals of Computer Science</h3>
+                    <p class="text-gray-600">Comprehensive introduction to computer science principles and concepts.</p>
                 </div>
             </div>
-            <!-- Service 2 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmclMjB0ZWFjaGluZ3xlbnwwfHwwfHx8MA%3D%3D"
-                        class="img-fluid mb-3" alt="Academic Courses">
-                    <h3>Academic Courses</h3>
-                    <p>Prepare for academic excellence with our tailored courses for GCSE and 11+ exams. We provide
-                        comprehensive support to help you succeed.</p>
+            <!-- <h2 class="text-3xl font-bold text-center text-secondary-color mb-12">Current Training Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                Python Programming & AI Fundamentals
+                <div class="training-card bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition">
+                    <i class="bi bi-code-slash text-5xl text-primary-color mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Python Programming & AI Fundamentals</h3>
+                    <p class="text-gray-600">Master Python programming and gain foundational knowledge in Artificial
+                        Intelligence to advance your career.</p>
+                    <a href="#contact" class="inline-block mt-4 text-primary-color hover:underline">Learn More →</a>
                 </div>
-            </div>
-            <!-- Service 3 -->
-            <div class="col-md-4">
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8VGVjaG5vbG9neSUyMFNlcnZpY2VzfGVufDB8fDB8fHww"
-                        class="img-fluid mb-3" alt="Technology Services">
-                    <h3>Technology Services</h3>
-                    <p>Leverage our expertise in Website and Application Development, Mechanical and Civil Engineering,
-                        and Cybersecurity to drive your business forward.</p>
+                Fundamentals of Computer Science
+                <div class="training-card bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition">
+                    <i class="bi bi-laptop text-5xl text-primary-color mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Fundamentals of Computer Science</h3>
+                    <p class="text-gray-600">Build a strong understanding of computer science principles and concepts
+                        essential for various technological fields.</p>
+                    <a href="#contact" class="inline-block mt-4 text-primary-color hover:underline">Learn More →</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="cta"
-        style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
-        <div class="container">
-            <h2>Ready to Elevate Your Skills and Technology?</h2>
-            <p>Contact us today to learn more about our services and how we can assist you in achieving your goals.</p>
-            <a href="#contact-us" class="btn btn-light">Contact Us</a>
+    <!-- Products Section -->
+<!-- Products Section -->
+<section id="products" class="py-20 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-[var(--secondary-color)] mb-12">Our Product: ManageOne</h2>
+        <div class="bg-white rounded-lg shadow-lg p-12 flex flex-col lg:flex-row items-center">
+            <!-- Product Image -->
+            <div class="lg:w-1/2 mb-8 lg:mb-0">
+                <div class="product-image-container">
+                    <!-- Replace the src with your actual product image -->
+                    <img src="./manageOne01.webp" alt="ManageOne" class="product-image">
+                </div>
+            </div>
+            <!-- Product Description -->
+            <div class="lg:w-1/2 lg:pl-12">
+                <h3 class="text-2xl font-semibold text-[var(--secondary-color)] mb-4">ManageOne</h3>
+                <p class="text-gray-700 text-lg mb-6">
+                    ManageOne is an all-in-one, customizable solution for coaching institutes and sports clubs to efficiently manage students, administrative tasks, and operations with scalability and flexibility.
+                </p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-center"><i class="bi bi-check-circle-fill text-[var(--primary-color)] mr-2"></i>Easy-to-use interface</li>
+                    <li class="flex items-center"><i class="bi bi-check-circle-fill text-[var(--primary-color)] mr-2"></i>Customizable features</li>
+                    <li class="flex items-center"><i class="bi bi-check-circle-fill text-[var(--primary-color)] mr-2"></i>Scalable solution</li>
+                </ul>
+                <a href="#contact" class="bg-[var(--primary-color)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--secondary-color)] transition">Learn More</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- Contact Form Section -->
-    <section id="contact-us" class="container my-5">
-        <h2 class="section-title text-center">Contact Us</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form id="contactForm" onsubmit="submitForm(event)">
-                    <input type="hidden" name="access_key" value="13744316-77e6-46b8-999e-18e97181bd80">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="problemSolving"
-                                value="Problem Solving using Python" required>
-                            <label class="form-check-label" for="problemSolving">Problem Solving using Python</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="fundamentals"
-                                value="Fundamentals of Computer Science" required>
-                            <label class="form-check-label" for="fundamentals">Fundamentals of Computer Science</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="other" value="Other"
-                                required>
-                            <label class="form-check-label" for="other">Other</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="mobile">Mobile Number (optional)</label>
-                        <input type="tel" class="form-control" name="mobile" id="mobile"
-                            placeholder="Your Mobile Number">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" name="message" id="message" rows="5" placeholder="Your Message"
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+    <!-- Contact us Form -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[var(--secondary-color)]" data-aos="fade-up">Contact Us
+            </h2>
+            <div class="flex justify-center">
+                <form class="space-y-4 w-full max-w-lg" data-aos="fade-left">
+                    <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
+                    <input type="email" placeholder="Your Email" class="w-full p-2 border rounded">
+                    <input type="tel" placeholder="Your Mobile Number (optional)" class="w-full p-2 border rounded">
+                    <!-- Mobile number input -->
+                    <textarea placeholder="Your Message" class="w-full p-2 border rounded h-32"></textarea>
+                    <button type="submit"
+                        class="bg-[var(--primary-color)] text-white px-6 py-2 rounded-full hover:bg-[var(--secondary-color)] transition duration-300">Send
+                        Message</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Notification Element -->
-    <div id="notification" class="notification">Thank you for your message. We will get back to you soon!</div>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Contact Information -->
-                <div class="col-md-4">
-                    <h5>Contact Information</h5>
-                    <!-- <p>Address: 123 Lotus Street, Tech City, TC 12345</p> -->
-                    <p>Phone: +447833818001</p>
-                    <p>Email: <a href="mailto:info.thelotusroots@gmail.com">info.thelotusroots@gmail.com</a></p>
-                </div>
-                <!-- Quick Links -->
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Training</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <!-- <li><a href="#">Blog</a></li> -->
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <!-- Social Media Links -->
-                <div class="col-md-4">
-                    <h5>Social Media Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
-                        </li>
-                        <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
-                        </li>
-                        <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-                        </li>
-                        <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
-    <!-- Copyright Section -->
-    <section class="copyright">
-        <div class="container">
-            <p class="text-center">&copy; 2024 The Lotus Roots. All rights reserved.</p>
-        </div>
-    </section>
-
-    <!-- JavaScript Files -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     <script>
-        function submitForm(event) {
-            event.preventDefault();
-            const form = document.getElementById('contactForm');
-            const formData = new FormData(form);
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        showNotification('Thank you for your message. We will get back to you soon!');
-                        form.reset();
-                    } else {
-                        showNotification('Oops! There was an error submitting your message. Please try again later.');
-                    }
-                })
-                .catch(error => {
-                    showNotification('Oops! There was an error submitting your message. Please try again later.');
-                });
-        }
-
-        function showNotification(message) {
-            const notification = document.getElementById('notification');
-            notification.innerText = message;
-            notification.style.display = 'block';
-
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 3000); // Display for 3 seconds
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contactForm');
-            form.reset();
+        $(document).ready(function () {
+            $("#footer-placeholder").load("./components/footer.html");
         });
     </script>
+    <!-- footer completed -->
+
+
+
+
 
     <script>
-        // Load header.html into the placeholder
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
+        AOS.init();
     </script>
-
 </body>
 
 </html>
