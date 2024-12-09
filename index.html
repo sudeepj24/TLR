@@ -110,7 +110,7 @@
 
 <body class="bg-white">
     <!-- Header/Navigation -->
-    <nav class="bg-white shadow-lg">
+<!--     <nav class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -136,7 +136,10 @@
             </div>
         </div>
     </nav>
+ -->
 
+    <div id="header-placeholder"></div>
+    
     <!-- Hero Section -->
     <section id="home" class="gradient-bg text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
@@ -290,10 +293,11 @@
 
     <script>
         $(document).ready(function () {
-            $("#footer-placeholder").load("./components/footer.html");
+            $("#header-placeholder").load("/components/header.html");  // Load the header
+            $("#footer-placeholder").load("./components/footer.html"); // Load the footer
         });
     </script>
-    <!-- footer completed -->
+    
 
 
 
