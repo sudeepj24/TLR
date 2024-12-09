@@ -19,18 +19,12 @@
     .service-card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
-        /* Makes it clear that the card is clickable */
     }
 
     .service-card:hover {
         transform: scale(1.05);
-        /* Enlarges the card slightly */
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        /* Optionally enhances the shadow for better emphasis */
     }
-
-
-
 
     .navbar-fixed {
         position: fixed;
@@ -42,46 +36,74 @@
         transition: all 0.3s ease;
     }
 
-    .service-card i {
-        margin-right: 8px;
-    }
-
     .arrow {
         font-size: 1.5rem;
         color: var(--primary-color);
         float: right;
     }
 
-
     @media (min-width: 768px) {
         #mobile-menu-button {
             display: none;
         }
     }
+
+    /* New style for bold menu items */
+    nav a {
+        /* font-weight: bold; Makes text bold */
+    }
 </style>
 
+<!-- Header/Navigation -->
 <nav class="bg-white shadow-lg">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
-                <div class="w-12 h-12 mr-2">
-                    <div class="w-full h-full bg-gray-200 rounded-full"></div>
-                </div>
-                <span class="text-xl font-bold text-[var(--primary-color)]">The Lotus Roots</span>
+                <!-- Logo and Title as clickable links -->
+                <a href="https://www.thelotusroots.co.uk/" class="flex items-center">
+                    <div class="w-12 h-12 mr-2 flex items-center justify-center">
+                        <img src="/LogoTLR.jpg" alt="Logo" class="w-full h-full rounded-full" />
+                    </div>
+                    <span class="text-xl font-bold text-[var(--primary-color)]">The Lotus Roots</span>
+                </a>
             </div>
+            
+            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-[var(--primary-color)]">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-[var(--primary-color)]">About</a>
-                <a href="#services" class="text-gray-600 hover:text-[var(--primary-color)]">Services</a>
-                <a href="#courses" class="text-gray-600 hover:text-[var(--primary-color)]">Courses</a>
-                <a href="#products" class="text-gray-600 hover:text-[var(--primary-color)]">Products</a>
-                <a href="#contact" class="text-gray-600 hover:text-[var(--primary-color)]">Contact</a>
+                <a href="https://www.thelotusroots.co.uk" class="text-gray-600 hover:text-[var(--primary-color)]">Home</a>
+                <a href="https://www.thelotusroots.co.uk/#services" class="text-gray-600 hover:text-[var(--primary-color)]">Services</a>
+                <a href="https://www.thelotusroots.co.uk#courses" class="text-gray-600 hover:text-[var(--primary-color)]">Courses</a>
+                <a href="https://www.thelotusroots.co.uk#products" class="text-gray-600 hover:text-[var(--primary-color)]">Products</a>
+                <a href="https://www.thelotusroots.co.uk#contact" class="text-gray-600 hover:text-[var(--primary-color)]">Contact</a>
             </div>
+
+            <!-- Mobile menu button -->
             <div class="md:hidden flex items-center">
                 <button id="mobile-menu-button" class="text-gray-600">
                     <i class="bi bi-list text-2xl"></i>
                 </button>
             </div>
         </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a href="https://www.thelotusroots.co.uk" class="block py-2 text-gray-600">Home</a>
+            <a href="https://www.thelotusroots.co.uk#services" class="block py-2 text-gray-600">Services</a>
+            <a href="https://www.thelotusroots.co.uk#courses" class="block py-2 text-gray-600">Courses</a>
+            <a href="https://www.thelotusroots.co.uk#products" class="block py-2 text-gray-600">Products</a>
+            <a href="https://www.thelotusroots.co.uk#contact" class="block py-2 text-gray-600">Contact</a>
+        </div>
     </div>
 </nav>
+
+<script>
+    // JavaScript for toggling mobile menu visibility
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu.style.display === 'block') {
+            mobileMenu.style.display = 'none';
+        } else {
+            mobileMenu.style.display = 'block';
+        }
+    });
+</script>
