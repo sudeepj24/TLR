@@ -1,0 +1,103 @@
+<section id="contact" class="py-20 px-4 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-[var(--secondary-color)] mb-12">Contact Us</h2>
+        <div class="flex flex-col lg:flex-row lg:space-x-12">
+            <!-- Contact Form -->
+            <div class="lg:w-1/2 mb-12 lg:mb-0">
+                <form id="newContactForm" action="#" method="POST" class="bg-white p-12 rounded-lg shadow-lg" data-aos="fade-right" data-aos-delay="100" onsubmit="submitNewForm(event)">
+                    <!-- Hidden Access Key -->
+                    <input type="hidden" name="access_key" value="bb2c8b20-9b06-4ae7-93a0-3d9ec5d9ca4f">
+                    
+                    <div class="mb-6">
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-6">
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-6">
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Mobile No. (Optional)">
+                    </div>
+                    <div class="mb-6">
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[var(--primary-color)] text-white px-4 py-3 rounded-full font-semibold hover:bg-[var(--accent-color)] transition-all">Send Message</button>
+                    <p id="notification" class="mt-4 text-center text-white bg-green-500 px-4 py-2 rounded opacity-0 transition-opacity duration-300"></p>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
+                <div class="bg-white p-12 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-center text-[var(--secondary-color)] mb-6">Get in Touch!</h3>
+                    <p class="text-gray-700 text-lg mb-6 text-center">Reach out to us with any questions or inquiries.</p>
+                    <div class="flex flex-col items-center mb-4">
+                        <a href="tel:+447833818001" class="flex items-center text-gray-700 text-lg">
+                            <i class="bi bi-telephone-fill text-[var(--primary-color)] text-2xl mr-4"></i>+44 7833818001
+                        </a>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <a href="mailto:info.thelotusroots@gmail.com" class="flex items-center text-gray-700 text-lg">
+                            <i class="bi bi-envelope-fill text-[var(--primary-color)] text-2xl mr-4"></i>info.thelotusroots@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Submission Script -->
+<script>
+function submitNewForm(event) {
+    event.preventDefault();  // Prevent the default form submission
+    const form = document.getElementById('newContactForm');
+    const formData = new FormData(form);  // Create a FormData object with the form's data
+    const notification = document.getElementById('notification');  // Notification element
+
+    // You can replace this URL with the correct endpoint for your form submission
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        console.log('Response:', response); // Log the response
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Data:', data); // Log the returned data for debugging
+        if (data.success) {
+            showNotification('Thank you for your message. We will get back to you soon!', 'success');
+            form.reset();  // Reset the form after successful submission
+        } else {
+            showNotification('Oops! There was an error submitting your message. Please try again later.', 'error');
+        }
+    })
+    .catch(error => {
+        console.error('Problem with fetch operation:', error);
+        showNotification('Oops! There was an error submitting your message. Please try again later.', 'error');
+    });
+}
+
+function showNotification(message, type = 'success') {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;  // Set notification message
+    notification.classList.remove('opacity-0', 'bg-green-500', 'bg-red-500');
+    if (type === 'success') {
+        notification.classList.add('bg-green-500');  // Success style
+    } else {
+        notification.classList.add('bg-red-500');  // Error style
+    }
+    notification.classList.add('opacity-100');
+    notification.style.display = 'block';  // Show the notification
+    setTimeout(() => {
+        notification.classList.remove('opacity-100');
+        notification.classList.add('opacity-0');
+        notification.style.display = 'none';  // Hide the notification after 5 seconds
+    }, 5000); 
+}
+</script>
