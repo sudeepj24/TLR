@@ -241,19 +241,28 @@
 
         // Load Header, Footer and Contact Form
         $(document).ready(function () {
-            $("#header-placeholder").load("/components/header.html");  // Load the header
-            $("#footer-placeholder").load("/components/footer.html"); // Load the footer
-            $("#contact-placeholder").load("/components/contact.html"); // Load Contact Form
+    // Load Header, Footer, and Contact Form
+    $("#header-placeholder").load("/components/header.html");
+    $("#footer-placeholder").load("/components/footer.html");
+    $("#contact-placeholder").load("/components/contact.html", function () {
+        // Check if URL contains #contact
+        if (window.location.hash === "#contact") {
+            $('html, body').animate({
+                scrollTop: $("#contact").offset().top
+            }, 800); // Smooth scroll after content is loaded
+        }
+    });
 
-            // Navbar scroll effect
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('.navbar').addClass('scrolled');
-                } else {
-                    $('.navbar').removeClass('scrolled');
-                }
-            });
-        });
+    // Navbar scroll effect
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
+        }
+    });
+});
+
     </script>
 </body>
 
