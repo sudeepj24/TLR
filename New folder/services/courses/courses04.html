@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Courses | Learn Programming & Computer Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-5">
+            <h1 class="text-3xl font-bold text-teal-600">Tech Education</h1>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Courses</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Python & AI Course -->
+            <div class="course-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-code-slash text-4xl text-teal-600"></i>
+                    <h3 class="text-2xl font-bold ml-4">Python Programming and AI Fundamentals</h3>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-gray-600">Learn python from basics, even if you have no programming exposure ever.</p>
+                    <div class="bg-teal-50 p-4 rounded-lg">
+                        <p class="font-semibold text-teal-800">Duration: 3-4 months</p>
+                        <p class="font-semibold text-teal-800">30+ engaging classes</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Curriculum:</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Flowcharts and Pseudocodes</li>
+                            <li>Variables, Operators and Data types</li>
+                            <li>String and its methods</li>
+                            <li>Conditional Statements</li>
+                            <li>Loops</li>
+                            <li>Functions</li>
+                            <li>OOP</li>
+                            <li>AI Basics</li>
+                            <li>ML Introduction</li>
+                            <li>3 Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computer Science Course -->
+            <div class="course-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-cpu text-4xl text-teal-600"></i>
+                    <h3 class="text-2xl font-bold ml-4">Fundamentals of Computer Science</h3>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-gray-600">A comprehensive program suitable for Secondary School Students!</p>
+                    <div class="bg-teal-50 p-4 rounded-lg">
+                        <p class="font-semibold text-teal-800">Duration: 12-15 months</p>
+                        <p class="font-semibold text-teal-800">100+ engaging classes</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-2">Curriculum:</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Computer Organization</li>
+                            <li>Computer Networks</li>
+                            <li>Working of Web Applications</li>
+                            <li>Programming Fundamentals in Python and Algorithms</li>
+                            <li>Cybersecurity Basics</li>
+                            <li>Databases and IT Applications</li>
+                            <li>Engineering Design and Visualization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Benefits Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Course Benefits</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="bi bi-check-circle text-3xl text-teal-600 mb-4"></i>
+                    <h3 class="font-semibold">GCSE-aligned curriculum</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="bi bi-clipboard-check text-3xl text-teal-600 mb-4"></i>
+                    <h3 class="font-semibold">Regular assessments and quizzes</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="bi bi-laptop text-3xl text-teal-600 mb-4"></i>
+                    <h3 class="font-semibold">Practical projects and assignments</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="bi bi-gear text-3xl text-teal-600 mb-4"></i>
+                    <h3 class="font-semibold">Industry-relevant skills</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="mt-16 text-center">
+            <div class="bg-teal-600 text-white rounded-xl p-8">
+                <h2 class="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
+                <p class="text-lg mb-6">Contact us today to join our upcoming batches!</p>
+                <button onclick="contactUs()" class="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Tech Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function contactUs() {
+            // You can customize this function based on your needs
+            window.location.href = "mailto:contact@techeducation.com";
+        }
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

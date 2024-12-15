@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Our Courses - Empowering You Through Knowledge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"/>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .course-card:hover .course-icon {
+            transform: rotate(8deg) scale(1.1);
+        }
+        .course-card:hover h3 {
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-center mb-6" data-aos="fade-down" data-aos-duration="1000">Empower Your Future</h1>
+            <p class="text-xl text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                Enhance your skills with our comprehensive courses designed to set you on the path to success.
+            </p>
+        </div>
+        <!-- Decorative shapes -->
+        <div class="absolute top-0 left-0 w-40 h-40 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full translate-x-1/2 translate-y-1/2"></div>
+    </header>
+
+    <!-- Courses Section -->
+    <section class="py-16 px-4 relative">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="1000">Our Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Python Programming and AI Fundamentals -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow course-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="text-blue-600 text-4xl mb-4 transition-transform course-icon"><i class="bi bi-cpu"></i></div>
+                    <h3 class="text-xl font-semibold mb-4 transition-colors">Python Programming and AI Fundamentals</h3>
+                    <p class="text-gray-700 mb-4">
+                        Learn Python from the ground up, even if you're completely new to programming. This 3-4 month course features 30+ engaging classes and introduces you to AI concepts.
+                    </p>
+                    <p class="text-gray-700 font-semibold mb-4">Curriculum Highlights:</p>
+                    <ul class="text-gray-600 list-disc list-inside mb-4 space-y-1">
+                        <li>Flowcharts & Pseudocode</li>
+                        <li>Variables, Operators, Data Types (Set, Tuple, Dictionary)</li>
+                        <li>Strings & Methods, Conditional Statements, Loops, Functions</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Basics of AI & Introduction to Machine Learning</li>
+                        <li>3 Hands-on Projects</li>
+                    </ul>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">Learn More →</a>
+                </div>
+
+                <!-- Fundamentals of Computer Science -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow course-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="text-blue-600 text-4xl mb-4 transition-transform course-icon"><i class="bi bi-laptop"></i></div>
+                    <h3 class="text-xl font-semibold mb-4 transition-colors">Fundamentals of Computer Science</h3>
+                    <p class="text-gray-700 mb-4">
+                        A 12-15 month program with 100+ interactive classes, ideal for secondary school students. Gain a solid foundation in computer science through hands-on learning and practical applications.
+                    </p>
+                    <p class="text-gray-700 font-semibold mb-4">Curriculum Highlights:</p>
+                    <ul class="text-gray-600 list-disc list-inside mb-4 space-y-1">
+                        <li>Computer Organization</li>
+                        <li>Computer Networks</li>
+                        <li>Working of Web Applications</li>
+                        <li>Programming Fundamentals (Python) & Algorithms</li>
+                        <li>Cybersecurity Basics</li>
+                        <li>Databases & IT Applications</li>
+                        <li>Engineering Design & Visualization</li>
+                    </ul>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">Learn More →</a>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative element -->
+        <div class="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-2/3 w-96 h-96 bg-blue-100 rounded-full opacity-20"></div>
+    </section>
+
+    <!-- Common Benefits Section -->
+    <section class="bg-gray-100 py-16 px-4 relative">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="1000">Common Benefits For All Our Courses</h2>
+            <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <p class="text-gray-700 font-semibold mb-4">Curriculum Highlights Include:</p>
+                <ul class="text-gray-600 list-disc list-inside space-y-1 mb-8">
+                    <li>Computer Organization</li>
+                    <li>Computer Networks</li>
+                    <li>Working of Web Applications</li>
+                    <li>Programming Fundamentals (Python) & Algorithms</li>
+                    <li>Cybersecurity Basics</li>
+                    <li>Databases & IT Applications</li>
+                    <li>Engineering Design & Visualization</li>
+                </ul>
+                <p class="text-gray-700 mb-4">
+                    No matter which course you choose, you'll gain a strong foundation in essential digital skills that are in high demand. Our experienced instructors, engaging lessons, and supportive learning environment ensure you progress confidently and effectively.
+                </p>
+            </div>
+        </div>
+        <!-- Decorative shape -->
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-blue-100 opacity-30 rounded-full hidden md:block"></div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 px-4 relative">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="1000">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="bi bi-people"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Expert Instructors</h3>
+                    <p class="text-gray-600">Guidance from industry professionals with in-depth knowledge.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="bi bi-lightbulb"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Hands-On Learning</h3>
+                    <p class="text-gray-600">Interactive sessions and practical projects to reinforce learning.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="bi bi-graph-up"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Career-Focused</h3>
+                    <p class="text-gray-600">Acquire skills that boost employability and growth opportunities.</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="bi bi-headset"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Ongoing Support</h3>
+                    <p class="text-gray-600">Receive continuous support throughout your learning journey.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative shape -->
+        <div class="absolute left-0 bottom-0 w-40 h-40 bg-blue-200 rounded-full opacity-30 -translate-x-1/3 translate-y-1/3 hidden md:block"></div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-16 px-4 relative overflow-hidden">
+        <div class="container mx-auto text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1000">Ready to Begin Your Learning Journey?</h2>
+            <p class="text-xl mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                Contact us today to join and transform your future with our comprehensive courses.
+            </p>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                Get Started
+            </button>
+        </div>
+        <!-- Decorative shapes -->
+        <div class="absolute left-0 bottom-0 w-52 h-52 bg-white opacity-10 rounded-full"></div>
+        <div class="absolute right-0 top-0 w-40 h-40 bg-white opacity-10 rounded-full"></div>
+    </section>
+
+    <div id="footer-placeholder"></div> <!-- Placeholder for the footer -->
+
+    <!-- AOS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        $(document).ready(function() {
+            $("#header-placeholder").load("/components/header.html");  // Load the header
+            $("#footer-placeholder").load("/components/footer.html");  // Load the footer
+        });
+    </script>
+</body>
+</html>

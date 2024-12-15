@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Digital Services - Your Complete Digital Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"/>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+    background: linear-gradient(to right, #06b6d4, #0284c7); /* Tailwind cyan-600 to cyan-700 */
+}
+
+        .service-card:hover .service-icon {
+            transform: rotate(8deg) scale(1.1);
+        }
+        .service-card:hover h3 {
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-center mb-6" data-aos="fade-down" data-aos-duration="1000">Transform Your Digital Presence</h1>
+            <p class="text-xl text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                Comprehensive digital solutions to elevate your business in the modern world
+            </p>
+        </div>
+        <!-- Decorative shapes -->
+        <div class="absolute top-0 left-0 w-40 h-40 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full translate-x-1/2 translate-y-1/2"></div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="py-16 px-4 relative">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="1000">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Web Development -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="text-cyan-600 text-4xl mb-4 transition-transform service-icon"><i class="bi bi-code-slash"></i></div>
+                    <h3 class="text-xl font-semibold mb-4 transition-colors">Website Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Custom-built websites from scratch or modernization of existing platforms. Our expert team delivers responsive, user-friendly solutions that drive conversion.
+                    </p>
+                    <ul class="text-gray-600 list-disc list-inside mb-4 space-y-1">
+                        <li>Custom Web Solutions</li>
+                        <li>Responsive Design</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                    <a href="#" class="text-cyan-600 hover:underline font-medium">Learn More →</a>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="text-cyan-600 text-4xl mb-4 transition-transform service-icon"><i class="bi bi-graph-up"></i></div>
+                    <h3 class="text-xl font-semibold mb-4 transition-colors">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Boost your online presence and reach your target audience effectively. Partner with our vendor <a href="https://www.brainmine.co.uk/" target="_blank" class="text-cyan-600 hover:underline">BrainMine UK</a> for comprehensive digital marketing solutions.
+                    </p>
+                    <ul class="text-gray-600 list-disc list-inside mb-4 space-y-1">
+                        <li>SEO Optimization</li>
+                        <li>Social Media Marketing</li>
+                        <li>Content Strategy</li>
+                    </ul>
+                    <a href="#" class="text-cyan-600 hover:underline font-medium">Learn More →</a>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="text-cyan-600 text-4xl mb-4 transition-transform service-icon"><i class="bi bi-shield-check"></i></div>
+                    <h3 class="text-xl font-semibold mb-4 transition-colors">Cybersecurity as a Service</h3>
+                    <p class="text-gray-600 mb-4">
+                        Protect your digital assets with our comprehensive security solutions. Our expert team ensures your applications stay secure against modern threats.
+                    </p>
+                    <ul class="text-gray-600 list-disc list-inside mb-4 space-y-1">
+                        <li>Penetration Testing</li>
+                        <li>Security Audits</li>
+                        <li>Threat Protection</li>
+                    </ul>
+                    <a href="#" class="text-cyan-600 hover:underline font-medium">Learn More →</a>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative element -->
+        <!-- <div class="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-2/3 w-96 h-96 bg-cyan-100 rounded-full opacity-20"></div> -->
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-gray-100 py-16 px-4 relative">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="1000">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-cyan-600 text-4xl mb-4"><i class="bi bi-people"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Expert Team</h3>
+                    <p class="text-gray-600">Skilled professionals with years of industry experience</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-cyan-600 text-4xl mb-4"><i class="bi bi-gear"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Custom Solutions</h3>
+                    <p class="text-gray-600">Tailored approaches to meet your unique business needs</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-cyan-600 text-4xl mb-4"><i class="bi bi-clock"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Time Efficient</h3>
+                    <p class="text-gray-600">Swift turnarounds without compromising on quality</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <div class="text-cyan-600 text-4xl mb-4"><i class="bi bi-headset"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Entensive Support</h3>
+                    <p class="text-gray-600">Dedicated assistance whenever you need it</p>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative shape -->
+        <!-- <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-cyan-100 opacity-30 rounded-full hidden md:block"></div> -->
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-16 px-4 relative overflow-hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="1000">Industries We Serve</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-building text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">Corporate</h3>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-shop text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">Retail</h3>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-heart-pulse text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">Healthcare</h3>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-bank text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">Finance</h3>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-book text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">Education</h3>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-truck text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">Logistics</h3>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-cart text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">E-commerce</h3>
+                </div>
+                <div class="text-center p-4 bg-white rounded-lg shadow hover:shadow-xl transition-shadow flex flex-col items-center">
+                    <i class="bi bi-gear text-4xl text-cyan-600 mb-3"></i>
+                    <h3 class="font-semibold">Manufacturing</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative pattern -->
+        <div class="absolute bottom-0 left-0 w-40 h-40 bg-cyan-200 rounded-full opacity-30 -translate-x-1/3 translate-y-1/3 hidden md:block"></div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class="bg-white py-16 px-4 relative">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up" data-aos-duration="1000">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <p class="text-gray-700 italic mb-4">
+                        "Lotos Root transformed our outdated website into a modern, responsive platform. Our engagement and conversions have skyrocketed."
+                    </p>
+                    <h4 class="font-semibold">- Sarah W., E-commerce Owner</h4>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <p class="text-gray-700 italic mb-4">
+                        "Their digital marketing strategies helped us rank higher on search engines and reach our target audience effectively."
+                    </p>
+                    <h4 class="font-semibold">- John D., Retail Manager</h4>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow">
+                    <p class="text-gray-700 italic mb-4">
+                        "With their cybersecurity services, we now operate confidently knowing our digital assets are safe from modern threats."
+                    </p>
+                    <h4 class="font-semibold">- Karen R., CTO at Tech Startup</h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-50 rounded-full opacity-50 translate-x-1/3 -translate-y-1/3 hidden md:block"></div>
+    </section> -->
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-16 px-4 relative overflow-hidden">
+        <div class="container mx-auto text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-6" data-aos="fade-down" data-aos-duration="1000">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                Let's discuss how we can help you achieve your digital goals.
+            </p>
+            <button class="bg-white text-cyan-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                Contact Us Today
+            </button>
+        </div>
+        <!-- Decorative shapes -->
+        <div class="absolute left-0 bottom-0 w-52 h-52 bg-white opacity-10 rounded-full"></div>
+        <div class="absolute right-0 top-0 w-40 h-40 bg-white opacity-10 rounded-full"></div>
+    </section>
+
+    <div id="footer-placeholder"></div> <!-- Placeholder for the footer -->
+
+    <!-- AOS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        $(document).ready(function() {
+            $("#header-placeholder").load("/components/header.html");  // Load the header
+            $("#footer-placeholder").load("/components/footer.html");  // Load the footer
+        });
+    </script>
+</body>
+</html>
