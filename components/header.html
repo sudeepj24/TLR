@@ -88,11 +88,11 @@
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden">
-            <a href="https://www.thelotusroots.co.uk" class="block py-2 text-gray-600">Home</a>
-            <a href="https://www.thelotusroots.co.uk#services" class="block py-2 text-gray-600">Services</a>
+            <a href="https://www.thelotusroots.co.uk" class="block py-2 text-gray-600 mobile-menu-link">Home</a>
+            <a href="https://www.thelotusroots.co.uk#services" class="block py-2 text-gray-600 mobile-menu-link">Services</a>
             
-            <a href="https://www.thelotusroots.co.uk#products" class="block py-2 text-gray-600">Products</a>
-            <a href="https://www.thelotusroots.co.uk#contact" class="block py-2 text-gray-600">Contact</a>
+            <a href="https://www.thelotusroots.co.uk#products" class="block py-2 text-gray-600 mobile-menu-link">Products</a>
+            <a href="https://www.thelotusroots.co.uk#contact" class="block py-2 text-gray-600 mobile-menu-link">Contact</a>
         </div>
     </div>
 </nav>
@@ -106,5 +106,13 @@
         } else {
             mobileMenu.style.display = 'block';
         }
+    });
+
+    // JavaScript to hide mobile menu when a link is clicked
+    document.querySelectorAll('.mobile-menu-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.style.display = 'none';
+        });
     });
 </script>
