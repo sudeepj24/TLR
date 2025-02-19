@@ -27,17 +27,6 @@
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
-    .navbar-sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(5px);
-        transition: all 0.3s ease;
-        height: 64px;
-    }
-
     .arrow {
         font-size: 1.5rem;
         color: var(--primary-color);
@@ -61,7 +50,7 @@
 </style>
 
 <!-- Header/Navigation -->
-<nav class="bg-white shadow-lg navbar-sticky">
+<nav class="bg-white shadow-lg" style="position: fixed; top: 0; z-index: 1000; width:100vw;">  
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
