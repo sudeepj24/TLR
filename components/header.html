@@ -50,7 +50,7 @@
 </style>
 
 <!-- Header/Navigation -->
-<nav class="bg-white shadow-lg">  
+<nav class="bg-white shadow-lg" id="navbar"> <!-- Added ID for targeting -->
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
@@ -80,7 +80,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden rounded-b-lg"> <!-- Add rounded-b-lg here -->
+        <div id="mobile-menu" class="md:hidden hidden">
             <a href="https://www.thelotusroots.co.uk" class="block py-2 text-gray-600 mobile-menu-link">Home</a>
             <a href="https://www.thelotusroots.co.uk#services" class="block py-2 text-gray-600 mobile-menu-link">Services</a>
             <a href="https://www.thelotusroots.co.uk#products" class="block py-2 text-gray-600 mobile-menu-link">Products</a>
@@ -90,15 +90,17 @@
 </nav>
 
 <script>
-    // JavaScript for toggling mobile menu visibility and adding rounded bottom
+    // JavaScript for toggling mobile menu visibility and adding rounded bottom to navbar
     document.getElementById('mobile-menu-button').addEventListener('click', function() {
         var mobileMenu = document.getElementById('mobile-menu');
+        var navbar = document.getElementById('navbar'); // Get the navbar element
+
         if (mobileMenu.style.display === 'block') {
             mobileMenu.style.display = 'none';
-            mobileMenu.classList.remove('rounded-b-lg'); // Remove rounded bottom when hiding
+            navbar.classList.remove('rounded-b-lg'); // Remove rounded bottom when hiding
         } else {
             mobileMenu.style.display = 'block';
-            mobileMenu.classList.add('rounded-b-lg'); // Add rounded bottom when showing
+            navbar.classList.add('rounded-b-lg'); // Add rounded bottom when showing
         }
     });
 
@@ -106,8 +108,10 @@
     document.querySelectorAll('.mobile-menu-link').forEach(function(link) {
         link.addEventListener('click', function() {
             var mobileMenu = document.getElementById('mobile-menu');
+            var navbar = document.getElementById('navbar'); // Get the navbar element
+
             mobileMenu.style.display = 'none';
-            mobileMenu.classList.remove('rounded-b-lg'); // Remove rounded bottom when hiding
+            navbar.classList.remove('rounded-b-lg'); // Remove rounded bottom when hiding
         });
     });
 </script>
